@@ -9,5 +9,5 @@ class entity:
     def say_details(self):
         return f"my name is: {self.name}"   
     def is_alive(self):
-        return  True if self.health<100 else False
+        return  True if self.health>0 else False
 
