@@ -19,8 +19,8 @@ class Validations:
             if Validations.is_int_or_flo(player["attack"]):
                 if Validations.is_int_or_flo(player["health"]):
                     if Validations.is_str(monster["name"]):
-                            if Validations.is_int_or_flo(monster["attack"]):
-                                if Validations.is_int_or_flo(monster["health"]):
-                                    return True
+                        if Validations.is_int_or_flo(monster["attack"]):
+                            if Validations.is_int_or_flo(monster["health"]):
+                                return True
                 
             
