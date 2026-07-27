@@ -1,5 +1,5 @@
-from entity import entity
+from entity import  Entity
 
-class player(entity):
+class player(Entity):
     def __init__(self, name, health, strength, agility, luck):
         super().__init__(name, health, strength, agility, luck)
