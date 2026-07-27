@@ -1,5 +1,5 @@
 
-class entity:
+class Entity:
     def __init__(self,name,health,strength,agility,luck):
         self.name=name
         self.health=health
