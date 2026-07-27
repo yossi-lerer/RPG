@@ -23,7 +23,7 @@ class Battle:
             Agility: {self.monster.agility}
             Luck: {self.monster.luck}
 
-        player attacks first, the
+        {self.player.name} attacks first
         """)
 
         counter = 0
@@ -51,7 +51,7 @@ class Battle:
                 self.player.health = 0
                 
         else:
-            if self.player.attack <= self.moster.health:
+            if self.player.attack <= self.monster.health:
                 self.monster.health -= self.player.attack
             else:
                 self.monster.health = 0
