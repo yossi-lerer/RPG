@@ -31,8 +31,10 @@ class Battle:
         while self.player.health > 0 and self.monster.health > 0:
             if counter % 2 == 0:
                 self.attack(self.player,self.monster)
+                print (f"{self.player.name} attacked")
             else:
                 self.attack(self.monster,self.player)
+                print (f"{self.monster.name} attacked")
 
             counter += 1
         print ("Game Over")
