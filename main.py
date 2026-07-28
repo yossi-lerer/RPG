@@ -1,4 +1,8 @@
-from config import player_settings, monster_settings
+try:
+    from config import player_settings, monster_settings
+except ImportError:
+    print("The config file is missing one or more of the variables player_settings, monster_settings")
+    exit()
 from player import Player
 from monster import Monster
 from battle import Battle
