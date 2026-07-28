@@ -19,9 +19,9 @@ class Validations:
         checker = True
         for key in required_keys:
             if key not in dictionary:
-                print('missing key' , key, "in config file ", end = " | ")
+                print('missing key:' , key, "in config file ", end = " | ")
                 checker = False      
-        return checker    
+        return checker
 
     @staticmethod
     def val_key_value(player,monster):

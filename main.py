@@ -2,6 +2,7 @@ try:
     from config import player_settings, monster_settings
 except ImportError:
     print("The config file is missing one or more of the variables player_settings, monster_settings")
+    print ("Fix and run game again")
     exit()
 from player import Player
 from monster import Monster
@@ -16,3 +17,5 @@ if Validations.key_in_dict(player_settings) and (monster_settings):
         battle.run()
     else:
         print ("Fix and run game again")
+else:
+    print ("Fix and run game again")
