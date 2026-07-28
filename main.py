@@ -15,4 +15,4 @@ if Validations.key_in_dict(player_settings) and (monster_settings):
         battle = Battle(player, monster)
         battle.run()
     else:
-        print ("something is wrong, game exiting")
+        print ("Fix and run game again")
