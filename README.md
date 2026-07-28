@@ -15,6 +15,18 @@ mosh begins and attacks mon, then mon attacks mosh. This cycle repeats until one
 
 - Both characters have a few attributes whose values are set in a config file. These include: health, attack, agility, luck, strength, name.
 
-- Instructions: To run the game, please enter 'python main.py' in the terminal.
+- Operating instructions: 
+    1. Edit the config.py file with your data
+        The file should contain two dictionary variables with the names player_settings, monster_settings
+        Each dictionary should contain the following keys and values:
+        "name": str, "health": number, "strength": number, "agility": number, "luck": number, "attack": number
+        For example:
+        player_settings = {"name": "mosh", "health": 80.9, "strength": 50.5, "agility": 5, "luck": 5, "attack": 20}
+        monster_settings = {"name": "mon", "health": 80.9, "strength": 50.5, "agility": 5, "luck": 5, "attack": 30}
+    2. To run the game, run the main file in the terminal.
+        For example:
+    ```
+    python main.py
+    ```
 
 - On run, a welcome message and a character status chart will be shown on the terminal. As the game runs, the terminal will show each time a character attacks another one. Once a player's health reaches 0, the terminal will print "Game Over" and who won the game.
