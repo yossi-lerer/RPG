@@ -23,4 +23,13 @@ class Validations:
                             if Validations.is_int_or_flo(monster["health"]):
                                 return True
                 
-            
+
+    @staticmethod
+    def key_in_dict(dictionary):
+        required_keys = ['name' , 'health', 'strength' , 'agility' , 'luck', 'attack']
+        checker = True
+        for key in required_keys:
+            if key not in dictionary:
+                print('missing key' , key, " ", end = " | ")
+                checker = False      
+        return checker    
