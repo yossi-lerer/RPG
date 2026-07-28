@@ -18,3 +18,6 @@ mosh begins and attacks mon, then mon attacks mosh. This cycle repeats until one
 - Instructions: To run the game, please enter 'python main.py' in the terminal.
 
 - On run, a welcome message and a character status chart will be shown on the terminal. As the game runs, the terminal will show each time a character attacks another one. Once a player's health reaches 0, the terminal will print "Game Over" and who won the game.
+
+
+Yishai מת.....
