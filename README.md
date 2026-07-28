@@ -21,8 +21,10 @@ mosh begins and attacks mon, then mon attacks mosh. This cycle repeats until one
         Each dictionary should contain the following keys and values:
         "name": str, "health": number, "strength": number, "agility": number, "luck": number, "attack": number
         For example:
+        ```
         player_settings = {"name": "mosh", "health": 80.9, "strength": 50.5, "agility": 5, "luck": 5, "attack": 20}
         monster_settings = {"name": "mon", "health": 80.9, "strength": 50.5, "agility": 5, "luck": 5, "attack": 30}
+        ```
     2. To run the game, run the main file in the terminal.
         For example:
     ```
