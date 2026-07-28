@@ -1,5 +1,5 @@
 - Project name: RPG
-- Developers: Yosi Lerr, Doitch, David Kalaora Yaakov Soibelman,
+- Developers: Yosi Lerr, Doitch, David Kalaora and Yaakov Soibelman,
 
 - Short game description: An RPG game. A player - "mosh" - enters a battle with a monster - "mon".
 mosh begins and attacks mon, then mon attacks mosh. This cycle repeats until one of them "dies" - until their health is reduced to 0.
