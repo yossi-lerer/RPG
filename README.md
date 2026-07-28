@@ -12,9 +12,12 @@ mosh begins and attacks mon, then mon attacks mosh. This cycle repeats until one
 4. player.py - has class Player, which inherits from Entity.
 5. monster.py - has class Monster, which inherits from Entity.
 6. config.py - config file has a dictionary which stores all set values of players and game.
-7. validations.py - this file validates 2 things: 1. Checks that the keys: "name", "health" and "attack" exist in monster and player. 2. checks that values stoared in these keys are correct - valid.
+7. validations.py - this file validates 3 things:
+    1. Checks that there are 2 settings - player_settings and monster_settings - these names must be exact!
+    2. checks that keys: "name", "health" and "attack" exist in monster and player settings.
+    3. checks that values stoared in these keys are correct - "name" value must be str, "health" and "attack" can be either int or float.
 
-- Both characters have a few attributes whose values are set in a config file. These include: health, attack, agility, luck, strength, name.
+- All of the Charachters attributes / settings are set in the config file. These include: health, attack, agility, luck, strength, name.
 
 ## Operating instructions: 
 
@@ -22,7 +25,7 @@ mosh begins and attacks mon, then mon attacks mosh. This cycle repeats until one
     The file should contain two dictionary variables with the names player_settings, monster_settings
     Each dictionary should contain the following keys and values:
 
-        "name": str, "health": number, "strength": number, "agility": number, "luck": number, "attack": number
+        "name": str, "health": number (int/float), "strength": number(int/float), "agility": number(int/float), "luck": number(int/float), "attack": number(int/float)
         
     For example:
 
@@ -30,7 +33,8 @@ mosh begins and attacks mon, then mon attacks mosh. This cycle repeats until one
         monster_settings = {"name": "mon", "health": 80.9, "strength": 50.5, "agility": 5, "luck": 5, "attack": 30}
         
     *Without an accurate definition of the config file, the launch will end without the game running.*
-2. To run the game, run the main file in the terminal.
+   
+3. To run the game, run the main file in the terminal.
     For example:
 
         python main.py
