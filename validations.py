@@ -19,7 +19,7 @@ class Validations:
         checker = True
         for key in required_keys:
             if key not in dictionary:
-                print('missing key' , key, " ", end = " | ")
+                print('missing key' , key, "in config file ", end = " | ")
                 checker = False      
         return checker    
 
