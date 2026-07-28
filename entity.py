@@ -7,8 +7,9 @@ class Entity:
         self.agility=agility
         self.luck=luck
         self.attack = attack
+
     def say_details(self):
-        return f"my name is: {self.name}"   
+        return f"my name is: {self.name}"
+     
     def is_alive(self):
         return  True if self.health>0 else False
-
