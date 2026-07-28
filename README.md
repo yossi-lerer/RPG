@@ -16,6 +16,7 @@ mosh begins and attacks mon, then mon attacks mosh. This cycle repeats until one
     1. Checks that there are 2 settings - player_settings and monster_settings - these names must be exact!
     2. checks that keys: "name", "health" and "attack" exist in monster and player settings.
     3. checks that values stoared in these keys are correct - "name" value must be str, "health" and "attack" can be either int or float.
+    4. Handling an error when writing a variable name that does not exist in the config file.
 
 - All of the Charachters attributes / settings are set in the config file. These include: health, attack, agility, luck, strength, name.
 

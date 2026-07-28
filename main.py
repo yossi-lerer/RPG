@@ -4,6 +4,10 @@ except ImportError:
     print("The config file is missing one or more of the variables player_settings, monster_settings")
     print ("Fix and run game again")
     exit()
+except NameError:
+    print("In the config.py file, keys or values ​​are used with text without quotes")
+    print ("Fix and run game again")
+    exit()
 from player import Player
 from monster import Monster
 from battle import Battle
