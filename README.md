@@ -19,7 +19,9 @@ mosh begins and attacks mon, then mon attacks mosh. This cycle repeats until one
     1. Edit the config.py file with your data
         The file should contain two dictionary variables with the names player_settings, monster_settings
         Each dictionary should contain the following keys and values:
+        ```
         "name": str, "health": number, "strength": number, "agility": number, "luck": number, "attack": number
+        ```
         For example:
         ```
         player_settings = {"name": "mosh", "health": 80.9, "strength": 50.5, "agility": 5, "luck": 5, "attack": 20}
