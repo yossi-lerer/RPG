@@ -13,6 +13,18 @@ class Validations:
     def is_instance(instance,cls):
         return isinstance(instance,cls)
     
+
+    @staticmethod
+    def key_in_dict(dictionary):
+        required_keys = ['name' , 'health', 'strength' , 'agility' , 'luck', 'attack']
+        checker = True
+        for key in required_keys:
+            if key not in dictionary:
+                print('missing key' , key, " ", end = " | ")
+                checker = False      
+        return checker    
+
+
     @staticmethod
     def val_key_value(player,monster):
         erorrs_value = []
