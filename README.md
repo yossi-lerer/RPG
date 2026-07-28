@@ -22,24 +22,18 @@ mosh begins and attacks mon, then mon attacks mosh. This cycle repeats until one
     The file should contain two dictionary variables with the names player_settings, monster_settings
     Each dictionary should contain the following keys and values:
 
-        ```
         "name": str, "health": number, "strength": number, "agility": number, "luck": number, "attack": number
-        ```
-
+        
     For example:
 
-        ```
         player_settings = {"name": "mosh", "health": 80.9, "strength": 50.5, "agility": 5, "luck": 5, "attack": 20}
         monster_settings = {"name": "mon", "health": 80.9, "strength": 50.5, "agility": 5, "luck": 5, "attack": 30}
-        ```
-
-        *Without an accurate definition of the config file, the game will not run.*
+        
+    *Without an accurate definition of the config file, the game will not run.*
 2. To run the game, run the main file in the terminal.
     For example:
-    
-       ```
+
         python main.py
-       ```
 
 ## On run
 
