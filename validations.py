@@ -14,7 +14,7 @@ class Validations:
         return isinstance(instance,cls)
     
     @staticmethod
-    def validate_config (player,monster):
+    def val_key_value(player,monster):
         erorrs_value = []
         if not Validations.is_str(player["name"]):
             erorrs_value.append("The name of player must be a string.")
