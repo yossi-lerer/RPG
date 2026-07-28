@@ -1,13 +1,13 @@
-from config import player_settigs, monster_settigs
+from config import player_settings, monster_settings
 from player import Player
 from monster import Monster
 from battle import Battle
 from validations import Validations
 
-if Validations.key_in_dict(player_settigs) and (monster_settigs):
-    if Validations.val_key_value(player_settigs,monster_settigs):
-        player = Player(player_settigs["name"], player_settigs["health"], player_settigs["strength"], player_settigs["agility"], player_settigs["luck"], player_settigs["attack"])
-        monster = Monster(monster_settigs["name"], monster_settigs["health"], monster_settigs["strength"], monster_settigs["agility"], monster_settigs["luck"], monster_settigs["attack"])
+if Validations.key_in_dict(player_settings) and (monster_settings):
+    if Validations.val_key_value(player_settings,monster_settings):
+        player = Player(player_settings["name"], player_settings["health"], player_settings["strength"], player_settings["agility"], player_settings["luck"], player_settings["attack"])
+        monster = Monster(monster_settings["name"], monster_settings["health"], monster_settings["strength"], monster_settings["agility"], monster_settings["luck"], monster_settings["attack"])
         battle = Battle(player, monster)
         battle.run()
     else:
