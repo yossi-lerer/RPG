@@ -1,5 +1,5 @@
 - Project name: RPG
-- Developers: Yosi Lerr, Doitch, Yaakov Soibelman
+- Developers: Yosi Lerr, Doitch, David Kalaora Yaakov Soibelman,
 
 - Short game description: An RPG game. A player - "mosh" - enters a battle with a monster - "mon".
 mosh begins and attacks mon, then mon attacks mosh. This cycle repeats until one of them "dies" - until their health is reduced to 0.
@@ -11,6 +11,7 @@ mosh begins and attacks mon, then mon attacks mosh. This cycle repeats until one
     4. player.py - has class Player, which inherits from Entity.
     5. monster.py - has class Monster, which inherits from Entity.
     6. config.py - config file has a dictionary which stores all set values of players and game.
+    7. validations.py - this file validates 2 things: 1. Checks that the keys: "name", "health" and "attack" exist in monster and player. 2. checks that values stoared in these keys are correct - valid.
 
 - Both characters have a few attributes whose values are set in a config file. These include: health, attack, agility, luck, strength, name.
 
