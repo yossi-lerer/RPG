@@ -1,7 +1,7 @@
 from player import Player
 from monster import Monster
 from entity import Entity
-import sys
+
 
 class Battle:
     def __init__(self,player:Player, monster: Monster):
@@ -16,25 +16,25 @@ class Battle:
         knight = "\U0001F3C7" 
         monster_ogre   = "\U0001F479"
         print (
-            f""""
-            Welcome to the battle between {self.player.name}{knight} and {self.monster.name}{monster_ogre}
+            f"""
+Welcome to the battle between {self.player.name}{knight} and {self.monster.name}{monster_ogre}
 
-            {crossed_swords}
+{crossed_swords}
 
-            {self.player.name} {knight} stats are;
-            Life: {self.player.health}
-            Strength: {self.player.strength}
-            Agility: {self.player.agility}
-            Luck: {self.player.luck}
+{self.player.name} {knight} stats are;
+Life: {self.player.health}
+Strength: {self.player.strength}
+Agility: {self.player.agility}
+Luck: {self.player.luck}
 
-            {self.monster.name} {monster_ogre} stats are;
-            Life: {self.monster.health}
-            Strength: {self.monster.strength}
-            Agility: {self.monster.agility}
-            Luck: {self.monster.luck}
+{self.monster.name} {monster_ogre} stats are;
+Life: {self.monster.health}
+Strength: {self.monster.strength}
+Agility: {self.monster.agility}
+Luck: {self.monster.luck}
 
-        {self.player.name} {knight} attacks first
-        """)
+{self.player.name} {knight} attacks first
+            """)
 
         counter = 0
 
