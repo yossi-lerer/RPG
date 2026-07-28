@@ -29,8 +29,8 @@ mosh begins and attacks mon, then mon attacks mosh. This cycle repeats until one
         ```
     2. To run the game, run the main file in the terminal.
         For example:
-    ```
-    python main.py
-    ```
+       ```
+        python main.py
+       ```
 
 - On run, a welcome message and a character status chart will be shown on the terminal. As the game runs, the terminal will show each time a character attacks another one. Once a player's health reaches 0, the terminal will print "Game Over" and who won the game.
