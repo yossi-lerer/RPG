@@ -5,7 +5,7 @@ except ImportError:
     print ("Fix and run game again")
     exit()
 except NameError:
-    print("In the config.py file, keys or values ​​are used. Writing text without quotes")
+    print("In the config.py file, keys or values ​​are used with text without quotes")
     print ("Fix and run game again")
     exit()
 from player import Player
