@@ -1,11 +1,14 @@
 from room import *
 from random import *
 import config
+from monster import *
 
 class Maze:
     def __init__(self, room_count: int):
         self.room_count = room_count
         self.maze = []
+        self.monster_chance = config.maze_settings["monster_chance"]
+        self.potion_chance = config.maze_settings["potion_chance"]
         
     def get_room (self, index:int):
         if index <= self.room_count:
@@ -18,19 +21,19 @@ class Maze:
                 counter +=1
         return counter
 
+    def generate (self):
+        for _ in range (self.room_count):
+            if self.will_be_monster() is Monster():
+                self.maze.append (Room (Monster(),))
+            elif self.will_be_monster() == True:
+                self.maze.append (Room (None,True))
+            else:
+                self.maze.append (Room ())
 
-class ChanceManeger:
-    def __init__(self):
-        self.monster_chance = config.maze_settings["monster_chance"]
-        self.potion_chance = config.maze_settings["potion_chance"]
-
-    def meeting_maneger(self):
+    def will_be_monster(self):
         if random.randomint(1, 10) <= self.monster_chance:
-            monster_name = config.monster_settings['name']
-            return (f'{monster_name} is here !!!')
-        
+            return Monster()
         elif random.randomint(1, 10) <= self.potion_chance:
-            return 'There is a potion in this room'
-
+            return True
         else:
             return 'The room is empty.'
