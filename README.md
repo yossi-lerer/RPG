@@ -26,7 +26,6 @@ If the room is empty, the game continues as usual.
 9. maze.py - creates a maze with room contents and instantiates a room
 10. room.py - holds the contents of the rooms and manages methods for displaying the contents.
 
-- All of the Charachters attributes / settings are set in the config file. These include: health, attack, agility, luck, strength, name.
 
 ## Operating instructions: 
 
@@ -38,7 +37,7 @@ If the room is empty, the game continues as usual.
         "name": str, "health": number (int/float), "strength": number(int/float), "agility": number(int/float), "luck": number(int/float), "attack": number(int/float)
         
     The monster_settings list should contain dictionaries of monsters. Each dictionary represents a monster:
-    
+
     Each dictionary should contain the following keys and values:
 
             "name": str, "health": number (int/float), "strength": number(int/float), "agility": number(int/float), "luck": number(int/float), "attack": number(int/float)
