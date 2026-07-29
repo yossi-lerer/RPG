@@ -24,7 +24,7 @@ class Game:
             self.show_summary()
         
     def show_main_menu(self):
-        user_choose=input("choose an option \n 1. enter next room \n 2. leave game")
+        user_choose=input("choose an option \n 1. enter next room \n 2. leave game\n")
         return user_choose
 
     def enter_next_room(self):
@@ -33,7 +33,7 @@ class Game:
             battle = Battle(self.player, room.monster)
             battle.run()
 
-        elif room.has_potion():
+        elif room.has_potion:
             if self.player.can_take_potion():
                 room.take_potion()
                 self.player.add_potion()

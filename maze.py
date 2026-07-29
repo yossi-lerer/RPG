@@ -25,8 +25,8 @@ class Maze:
     def generate (self):
         for _ in range (self.room_count):
             create_room_content = self.will_be_monster()
-            if create_room_content is Monster:
-                self.maze.append (Room (create_room_content(),))
+            if isinstance(create_room_content, Monster):
+                self.maze.append (Room (create_room_content,))
             elif create_room_content == True:
                 self.maze.append (Room (None,True))
             else:
