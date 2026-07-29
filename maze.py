@@ -1,10 +1,12 @@
 from room import *
+from random import *
+import config
+
 class Maze:
     def __init__(self, room_count: int):
         self.room_count = room_count
         self.maze = []
         
-
     def get_room (self, index:int):
         if index <= self.room_count:
             return self.maze[index-1]
@@ -15,16 +17,6 @@ class Maze:
             if Room.has_monster(self.maze[i]):
                 counter +=1
         return counter
-
-
-
-    
-from random import *
-import config
-
-class Maze:
-    def __init__(self):
-        pass
 
 
 class ChanceManeger:
@@ -42,6 +34,3 @@ class ChanceManeger:
 
         else:
             return 'The room is empty.'
-
-
-
