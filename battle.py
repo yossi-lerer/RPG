@@ -54,6 +54,7 @@ Luck: {self.monster.luck}
             print (f"{self.player.name} {knight} died {skull}, {self.monster.name} {monster_ogre} Won! {trophy}")
         else:
             print (f"{self.monster.name} {monster_ogre} died {skull}, {self.player.name} {knight} Won! {trophy}")
+            self.player.add_win()
 
     def attack (self, attacker: Entity):
 

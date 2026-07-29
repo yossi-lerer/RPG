@@ -4,6 +4,7 @@ class Player(Entity):
     def __init__(self, name, health, strength, agility, luck, attack):
         super().__init__(name, health, strength, agility, luck, attack)
         self.potion = 0
+        self.wictories=0
     
     def can_take_potion(self):
         if self.potion < 2:
@@ -14,3 +15,6 @@ class Player(Entity):
     def add_potion(self):
         self.potion += 1
         return True
+
+    def add_win(self):
+        self.wictories+=1
