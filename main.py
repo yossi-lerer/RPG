@@ -2,8 +2,9 @@ from player import Player
 from monster import Monster
 from battle import Battle
 from validations import Validations
+from config import *
+
 Validations.val_import_config()
-from config import player_settings, monster_settings, maze_settings
 Validations.val_key_and_value(player_settings, monster_settings, maze_settings)
 Validations.val_min_rooms(maze_settings["room_count"])
 

@@ -56,7 +56,7 @@ class Validations:
         try:
             from config import player_settings, monster_settings, maze_settings
         except ImportError:
-            print("The config file is missing one or more of the variables player_settings, monster_settings")
+            print("The config file is missing one or more of the variables player_settings, monster_settings, maze_settings")
             print ("Fix and run game again")
             exit()
         except NameError:
