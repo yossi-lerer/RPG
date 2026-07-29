@@ -3,7 +3,7 @@ from room import *
 from battle import *
 
 class Game:
-    def __init__(self,player,maze):
+    def __init__(self,player: Player, maze: Maze):
         self.player=player
         self.maze=maze
         self.current_room_index=0
@@ -33,9 +33,9 @@ class Game:
             battle.run()
 
         elif room.has_potion():
-            if self.player.add_potion():
+            if self.player.can_take_potion():
                 room.take_potion()
-                self.add_potion()
+                self.player.add_potion()
         self.current_room_index += 1
 
     def show_summary(self):
