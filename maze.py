@@ -33,7 +33,8 @@ class Maze:
                 self.maze.append (Room (None))
 
     def will_be_monster(self):
-        monster = Monster(monster_settings[0]["name"], monster_settings[0]["health"], monster_settings[0]["strength"], monster_settings[0]["agility"], monster_settings[0]["luck"], monster_settings[0]["attack"])
+        i = random.randint(0, len(monster_settings) - 1)
+        monster = Monster(monster_settings[i]["name"], monster_settings[i]["health"], monster_settings[i]["strength"], monster_settings[i]["agility"], monster_settings[i]["luck"], monster_settings[i]["attack"])
         if random.randint(1, 10) <= self.monster_chance:
             return monster
         elif random.randint(1, 10) <= self.potion_chance:
