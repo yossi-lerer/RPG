@@ -1,3 +1,4 @@
+from monster import Monster
 class Room:
     def __init__(self, monster: Monster | None , has_potion: bool = False):
         self.monster = monster
@@ -5,6 +6,10 @@ class Room:
 
     def has_monster(self):
         if self.monster:
+            return True
+
+    def has_potion (self):
+        if self.has_potion == True:
             return True
 
     def take_potion(self):

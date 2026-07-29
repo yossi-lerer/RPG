@@ -1,14 +1,15 @@
 from room import *
-from random import *
-import config
+import random
+from config import *
+from monster import *
 from monster import *
 
 class Maze:
     def __init__(self, room_count: int):
         self.room_count = room_count
         self.maze = []
-        self.monster_chance = config.maze_settings["monster_chance"]
-        self.potion_chance = config.maze_settings["potion_chance"]
+        self.monster_chance = maze_settings["monster_chance"]
+        self.potion_chance = maze_settings["potion_chance"]
         
     def get_room (self, index:int):
         if index <= self.room_count:
@@ -23,17 +24,19 @@ class Maze:
 
     def generate (self):
         for _ in range (self.room_count):
-            if self.will_be_monster() is Monster():
-                self.maze.append (Room (Monster(),))
-            elif self.will_be_monster() == True:
+            create_room_content = self.will_be_monster()
+            if create_room_content is Monster:
+                self.maze.append (Room (create_room_content(),))
+            elif create_room_content == True:
                 self.maze.append (Room (None,True))
             else:
-                self.maze.append (Room ())
+                self.maze.append (Room (None))
 
     def will_be_monster(self):
-        if random.randomint(1, 10) <= self.monster_chance:
-            return Monster()
-        elif random.randomint(1, 10) <= self.potion_chance:
+        monster = Monster(monster_settings["name"], monster_settings["health"], monster_settings["strength"], monster_settings["agility"], monster_settings["luck"], monster_settings["attack"])
+        if random.randint(1, 10) <= self.monster_chance:
+            return monster
+        elif random.randint(1, 10) <= self.potion_chance:
             return True
         else:
             return 'The room is empty.'
