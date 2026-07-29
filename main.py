@@ -1,25 +1,13 @@
-try:
-    from config import player_settings, monster_settings
-except ImportError:
-    print("The config file is missing one or more of the variables player_settings, monster_settings")
-    print ("Fix and run game again")
-    exit()
-except NameError:
-    print("In the config.py file, keys or values ​​are used with text without quotes")
-    print ("Fix and run game again")
-    exit()
 from player import Player
 from monster import Monster
 from battle import Battle
 from validations import Validations
+Validations.val_import_config()
+from config import player_settings, monster_settings, maze_settings
+Validations.val_key_and_value(player_settings, monster_settings, maze_settings)
+Validations.val_min_rooms(maze_settings["room_count"])
 
-if Validations.key_in_dict(player_settings) and Validations.key_in_dict(monster_settings):
-    if Validations.val_key_value(player_settings,monster_settings):
-        player = Player(player_settings["name"], player_settings["health"], player_settings["strength"], player_settings["agility"], player_settings["luck"], player_settings["attack"])
-        monster = Monster(monster_settings["name"], monster_settings["health"], monster_settings["strength"], monster_settings["agility"], monster_settings["luck"], monster_settings["attack"])
-        battle = Battle(player, monster)
-        battle.run()
-    else:
-        print ("Fix and run game again")
-else:
-    print ("Fix and run game again")
+player = Player(player_settings["name"], player_settings["health"], player_settings["strength"], player_settings["agility"], player_settings["luck"], player_settings["attack"])
+monster = Monster(monster_settings["name"], monster_settings["health"], monster_settings["strength"], monster_settings["agility"], monster_settings["luck"], monster_settings["attack"])
+battle = Battle(player, monster)
+battle.run()
