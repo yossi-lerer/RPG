@@ -30,19 +30,19 @@ class Validations:
             erorrs_value.append("The attack of player must be a number.")
         if not Validations.is_int_or_flo(player["health"]):
             erorrs_value.append("The health of player must be a number.")
-        if not Validations.is_str(monster["name"]):
-            erorrs_value.append("The name of monster must be a string.")
-        if not Validations.is_int_or_flo(monster["attack"]):
-            erorrs_value.append("The attack of monster must be a number.")
-        if not Validations.is_int_or_flo(monster["health"]):
-            erorrs_value.append("The health of moster must be a number.")
         if not isinstance(maze["room_count"], int):
             erorrs_value.append("The room_count of maze must be a integer.")
         if not isinstance(maze["monster_chance"], int):
             erorrs_value.append("The monster_chance of maze must be a integer.")
         if not isinstance(maze["potion_chance"], int):
             erorrs_value.append("The potion_chance of maze must be a integer.")
-
+        for _ in range(2):
+            if not Validations.is_str(monster[_]["name"]):
+                erorrs_value.append("The name of monster must be a string.")
+            if not Validations.is_int_or_flo(monster[_]["attack"]):
+                erorrs_value.append("The attack of monster must be a number.")
+            if not Validations.is_int_or_flo(monster[_]["health"]):
+                erorrs_value.append("The health of moster must be a number.")    
         if erorrs_value == []:
             return True
         else:
@@ -68,7 +68,7 @@ class Validations:
     def val_key_and_value(player_settings, monster_settings, maze_settings):
         required_keys_monster_and_players = ['name' , 'health', 'strength' , 'agility' , 'luck', 'attack']
         required_keys_maze_settings = ['room_count', 'monster_chance', 'potion_chance']
-        if Validations.key_in_dict(player_settings, required_keys_monster_and_players) and Validations.key_in_dict(monster_settings, required_keys_monster_and_players) and Validations.key_in_dict(maze_settings, required_keys_maze_settings):
+        if Validations.key_in_dict(player_settings, required_keys_monster_and_players) and Validations.key_in_dict(monster_settings[0], required_keys_monster_and_players) and Validations.key_in_dict(monster_settings[1], required_keys_monster_and_players) and Validations.key_in_dict(maze_settings, required_keys_maze_settings):
             if Validations.val_key_value(player_settings,monster_settings,maze_settings):
                 return True
         else:
