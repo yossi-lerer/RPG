@@ -11,6 +11,6 @@ class Player(Entity):
         else:
             return False
 
-    
     def add_potion(self):
         self.potion += 1
+        return True
