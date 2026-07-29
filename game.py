@@ -11,6 +11,10 @@ class Game:
         self.current_room_index=0
 
     def run(self):
+        print("""
+        🏰 WELCOME TO THE RPG MAZE 🏰
+⚔️ Brave adventurer, your journey begins now!
+🍀 Good luck... you'll need it.""")
         while self.player.is_alive() and self.current_room_index < self.maze.room_count:
             choice = self.show_main_menu()
             if choice == "1":
