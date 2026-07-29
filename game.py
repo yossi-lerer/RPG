@@ -1,6 +1,7 @@
 from player import *
 from room import *
 from battle import *
+from maze import Maze
 
 class Game:
     def __init__(self,player: Player, maze: Maze):
