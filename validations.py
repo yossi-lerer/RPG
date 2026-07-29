@@ -1,3 +1,5 @@
+from monster import Monster
+#from maze import *
 class Validations:
 
     @staticmethod
@@ -81,3 +83,14 @@ class Validations:
             print("Minimum room_count must be less than 4")
             print ("Fix and run game again")
             exit()
+
+    @staticmethod
+    def validate_monsters(maze):
+        count = 0
+        for room in maze :
+            if room.has_monster():
+                count += 1
+        if count < 3:
+            return False 
+        else:
+            return True
