@@ -3,6 +3,7 @@ import random
 from config import *
 from monster import *
 from monster import *
+from validations import Validations
 
 class Maze:
     def __init__(self, room_count: int):
@@ -31,6 +32,11 @@ class Maze:
                 self.maze.append (Room (None,True))
             else:
                 self.maze.append (Room (None))
+
+        if not Validations.validate_monsters(self.maze):
+            self.maze =[]
+            print('Creating a new maze🔁, there were not enough monsters.\n')
+            self.generate()
 
     def will_be_monster(self):
         i = random.randint(0, len(monster_settings) - 1)
