@@ -37,7 +37,8 @@ If the room is empty, the game continues as usual.
 
         "name": str, "health": number (int/float), "strength": number(int/float), "agility": number(int/float), "luck": number(int/float), "attack": number(int/float)
         
-    The monster_settings list should contain dictionaries of monsters. Each dictionary represents a monster.:
+    The monster_settings list should contain dictionaries of monsters. Each dictionary represents a monster:
+    
     Each dictionary should contain the following keys and values:
 
             "name": str, "health": number (int/float), "strength": number(int/float), "agility": number(int/float), "luck": number(int/float), "attack": number(int/float)
