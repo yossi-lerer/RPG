@@ -2,6 +2,7 @@ from player import *
 from room import *
 from battle import *
 from maze import Maze
+from config import *
 
 class Game:
     def __init__(self,player: Player, maze: Maze):
@@ -17,14 +18,15 @@ class Game:
             elif choice == "2":
                 self.show_summary()
                 break
-
+            else:
+                print("please enter 1 or 2\n")
         if not self.player.is_alive():
             self.show_summary()
         elif self.current_room_index == self.maze.room_count:
             self.show_summary()
         
     def show_main_menu(self):
-        user_choose=input("choose an option \n 1. enter next room \n 2. leave game\n")
+        user_choose=input(f"\n  >>>menu<<<\nyour next room is:{self.current_room_index+1}\nchoose an option \n 1. enter next room🚪 \n 2. leave game🏃‍♂️‍➡️\n")
         return user_choose
 
     def enter_next_room(self):
@@ -37,6 +39,8 @@ class Game:
             if self.player.can_take_potion():
                 room.take_potion()
                 self.player.add_potion()
+        else:
+            print("the room is empty\n")
         self.current_room_index += 1
 
     def show_summary(self):
@@ -45,7 +49,11 @@ class Game:
 Life: {self.player.health}
 Strength: {self.player.strength}
 Agility: {self.player.agility}
-Luck: {self.player.luck}""")
+Luck: {self.player.luck}
+rooms comleted: {self.current_room_index} out of {maze_settings["room_count"]}✅
+you defeated: {self.player.wictories} monsters 👏
+""")
+
 
 
         
