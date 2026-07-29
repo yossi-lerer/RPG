@@ -1,5 +1,4 @@
 from monster import Monster
-#from maze import *
 class Validations:
 
     @staticmethod

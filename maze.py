@@ -35,7 +35,7 @@ class Maze:
 
         if not Validations.validate_monsters(self.maze):
             self.maze =[]
-            print('Creating a new maze, there were not enough monsters.\n')
+            print('Creating a new maze🔁, there were not enough monsters.\n')
             self.generate()
 
     def will_be_monster(self):
